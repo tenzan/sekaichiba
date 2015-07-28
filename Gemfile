@@ -36,6 +36,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-rails', '~> 4.3'
 gem 'simple_form', '~> 3.1.0'
+gem 'rb-fsevent'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -53,11 +54,11 @@ end
 group :test do
   gem 'capybara', '~> 2.4'
   gem 'factory_girl_rails', '~> 4.5'
+  gem 'guard-rspec'
 end
 
 group :production do
   gem 'thin'
-  gem 'pg'
   gem 'rails_12factor'
 end
 
