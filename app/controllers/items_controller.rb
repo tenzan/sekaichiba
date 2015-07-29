@@ -37,12 +37,19 @@ class ItemsController < ApplicationController
     end
   end
 
+  def destroy
+    @item.destroy
+
+    flash[:notice] = 'Item has been deleted.'
+    redirect_to items_url
+  end
+
   private
 
   def set_item
     @item = Item.find(params[:id])
   rescue ActiveRecord::RecordNotFound
-    flash[:alert] = "The item could not be found."
+    flash[:alert] = 'The item could not be found.'
     redirect_to items_path
   end
 
