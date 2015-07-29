@@ -8,7 +8,7 @@ RSpec.feature 'Users can create new items' do
   end
   scenario 'with valid attributes' do
     fill_in 'Name', with: 'Shampoo'
-    fill_in 'Quantity', with: '3'
+    fill_in 'Quantity', with: 3
     click_button 'Create Item'
 
     expect(page).to have_content 'Item has been created.'
