@@ -1,12 +1,18 @@
 <header>
   <h1><%= @item.name %></h1>
-</header>
 
-<%= link_to 'Edit Item', edit_item_path(@item) %>
-<%= link_to 'Delete Item',
-            item_path(@item),
-            method: :delete,
-            data: { confirm: 'Are you sure you want to delete this item?'}
-%>
+  <ul class="actions">
+    <li><%= link_to 'Edit Item', edit_item_path(@item), class: 'edit' %></li>
+    <li>
+      <%= link_to 'Delete Item',
+                  item_path(@item),
+                  method: :delete,
+                  data: { confirm: 'Are you sure you want to delete this item?'},
+                  class: 'delete'
+      %>
+    </li>
+  </ul>
+
+</header>
 
 <p>Quantity: <%= @item.quantity %></p>
