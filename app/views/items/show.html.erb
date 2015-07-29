@@ -2,4 +2,6 @@
   <h1><%= @item.name %></h1>
 </header>
 
-<p><%= @item.quantity %></p>
+<%= link_to "Edit Itemt", edit_item_path(@item) %>
+
+<p>Quantity: <%= @item.quantity %></p>
