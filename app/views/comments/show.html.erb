@@ -1,0 +1,11 @@
+<div id="ticket">
+  <header>
+    <h1>@item.name</h1>
+  </header>
+
+  <header>
+    <h2><%=@comment.body %></h2>
+  </header>
+
+  <%= simple_format(@comment.body) %>
+</div>

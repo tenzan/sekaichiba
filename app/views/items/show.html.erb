@@ -16,3 +16,12 @@
 </header>
 
 <p>Quantity: <%= @item.quantity %></p>
+
+<header>
+  <h2>Comments</h2>
+
+  <ul class="actions">
+    <li><%= link_to 'New Comment', new_item_comment_path(@item), class: 'new' %></li>
+
+  </ul>
+</header>
