@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = @item.comments.build(comment_params)
+    @comment.author = current_user
 
     if @comment.save
       flash[:notice] = 'Comment has been created.'

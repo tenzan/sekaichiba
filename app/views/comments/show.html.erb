@@ -14,5 +14,17 @@
     </ul>
   </header>
 
+
+  <table id="attributes">
+    <tr>
+      <th>Author:</th>
+      <td><%= @comment.author.email %></td>
+    </tr>
+    <tr>
+      <th>Created:</th>
+      <td><%= time_ago_in_words(@comment.created_at) %> ago</td>
+    </tr>
+  </table>
+
   <%= simple_format(@comment.body) %>
 </div>
