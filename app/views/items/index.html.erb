@@ -1,5 +1,5 @@
 <header>
-  <h1>Items</h1>
+  <h1>Items List</h1>
 
   <ul class="actions">
     <li>
@@ -8,9 +8,26 @@
   </ul>
 </header>
 
-<div id="items">
-  <% @items.each do |item| %>
-    <h2><%= link_to item.name, item %></h2>
-  <% end  %>
-</div>
+<div class="panel panel-default">
 
+<table class="table">
+  <thead>
+  <tr>
+    <th>Date</th>
+    <th>Name</th>
+    <th>Qty</th>
+    <th>Comments</th>
+  </tr>
+  </thead>
+  <% @items.each do |item| %>
+  <tbody>
+
+    <td><%= item.created_at %></td>
+    <td><%= link_to item.name, item %></td>
+    <td><%= item.quantity %></td>
+    <td><%= item.comments.size %></td>
+    <% end %>
+  </tbody>
+</table>
+
+</div>
