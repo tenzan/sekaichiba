@@ -3,6 +3,7 @@
 
   <ul class="actions">
     <li><%= link_to 'Edit Item', edit_item_path(@item), class: 'edit' %></li>
+    <% admins_only do %>
     <li>
       <%= link_to 'Delete Item',
                   item_path(@item),
@@ -11,6 +12,7 @@
                   class: 'delete'
       %>
     </li>
+    <% end  %>
   </ul>
 
 </header>
