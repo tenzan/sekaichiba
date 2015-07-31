@@ -36,7 +36,7 @@ module Sekaichiba
       g.test_framework :rspec, fixture: false,
         view_specs: false,
         helper_specs: false,
-        controller_specs: false,
+        controller_specs: true,
         model_specs: false
     end
   end
