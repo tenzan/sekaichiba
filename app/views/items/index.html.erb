@@ -1,4 +1,5 @@
 <header>
+  <% if user_signed_in? %>
   <h1>Items List</h1>
 
   <ul class="actions">
@@ -28,5 +29,7 @@
     </tbody>
   <% end %>
 </table>
+
+  <% end %>
 
 </div>
