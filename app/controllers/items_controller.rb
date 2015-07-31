@@ -38,9 +38,13 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item.destroy
 
-    flash[:notice] = 'Item has been deleted.'
+    if current_user.try(:admin?)
+      @item.destroy
+      flash[:notice] = 'Item has been deleted.'
+    else
+      flash[:alert] = 'Only admins can delete itesm.'
+    end
     redirect_to items_url
   end
 
