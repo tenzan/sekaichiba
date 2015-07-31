@@ -1,10 +1,6 @@
 require 'rails_helper'
 
 RSpec.feature 'User can delete items' do
-  before do
-    login_as(FactoryGirl.create(:user, :admin))
-  end
-
   scenario 'successfully' do
     FactoryGirl.create(:item, name: 'Shampoo', quantity: 3)
 
