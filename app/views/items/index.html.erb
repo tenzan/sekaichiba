@@ -1,12 +1,14 @@
 <header>
-  <% if user_signed_in? %>
+
   <h1>Items List</h1>
 
+  <% if user_signed_in? %>
   <ul class="actions">
     <li>
       <%= link_to 'New Item', new_item_path, class: 'new' %>
     </li>
   </ul>
+  <% end %>
 </header>
 
 <div class="panel panel-default">
@@ -30,6 +32,5 @@
   <% end %>
 </table>
 
-  <% end %>
-
 </div>
+
