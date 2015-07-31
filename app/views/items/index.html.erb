@@ -20,14 +20,13 @@
   </tr>
   </thead>
   <% @items.each do |item| %>
-  <tbody>
-
-    <td><%= item.created_at %></td>
-    <td><%= link_to item.name, item %></td>
-    <td><%= item.quantity %></td>
-    <td><%= item.comments.size %></td>
-    <% end %>
-  </tbody>
+    <tbody>
+        <td><%= item.created_at %></td>
+        <td><%= link_to item.name, item %></td>
+        <td><%= item.quantity %></td>
+        <td><%= item.comments.size %></td>
+    </tbody>
+  <% end %>
 </table>
 
 </div>
